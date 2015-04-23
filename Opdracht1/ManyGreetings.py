@@ -1,4 +1,3 @@
 name = input( 'Name? ')
-print('Hello, ' + name + '!')
-
-print( 'hoi' )
+number = input( 'How many greetings? ')
+print(number + ' x Hello, ' + name + '!')
