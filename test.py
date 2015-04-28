@@ -1,14 +1,25 @@
-print('hello world')
-type('Hello world!')
-print(type(15))
-miles=26.2
-print(miles*1.61)
-print(5)
-x=5
-print(x+1)
-5
-x=5
-x+1
+document = open('words.txt', 'w')
+print (document)
+line1= 'Hello \n'
+document.write(line1)
+line2= 'world \n'
+document.write(line2)
+line3='goodbye'
+document.write(line3)
+document.close()
+
+fin = open('words.txt')
+
+t=[]
+for line in fin:
+    t=t+[line[0]]
+    print(t)
+
+fin.close()
+
+
+
+
 
 
 
