@@ -8,23 +8,22 @@ def prime(n):
             if x%deler==0 and x!=deler:
                 getallen.remove(x)
     print(getallen)
-   
+    
 
-prime(10000)
-
+prime(21)
 
 T2=time.perf_counter()
-print('Time required', T2-T1, 'sec.')
-print('Found x Prime numbers smaller than n in', T2-T1 , 'sec.')
+
+print('Found x Prime numbers smaller than n in', T2-T1, 'sec.')
 
 
-fin = open( 'prime.dat', 'w')
-print(fin)
-line1 = 'hallo'
-fin.write(line1)
-line2 = 'hallo'
-fin.write(line2)
-fin.close()
+document = open('prime.dat')
+print(document)
+line1='hallo'
+document.write(line1)
+document.close()
+
+
 
 
     
