@@ -1,3 +1,4 @@
+import sys
 import time
 T1=time.perf_counter()
 
@@ -7,21 +8,34 @@ def prime(n):
         for x in getallen:
             if x%deler==0 and x!=deler:
                 getallen.remove(x)
-    print(getallen)
     
+    return getallen
+    
+n=int(sys.argv[1])
+bestandsnaam = sys.argv[2]
 
-prime(21)
+    
+document = open(bestandsnaam ,  'w')
+for x in prime(n):
+    document.write(str(x) + '\n')
+document.close()
+    
+size=(len(prime(n)))
 
 T2=time.perf_counter()
 
-print('Found x Prime numbers smaller than n in', T2-T1, 'sec.')
+print('Found ' + str(size) + ' Prime numbers smaller than ' + str(n) + ' in ' + str(T2-T1) + ' sec.')
+
+ 
 
 
-document = open('prime.dat')
-print(document)
-line1='hallo'
-document.write(line1)
-document.close()
+
+
+
+
+
+
+
 
 
 
