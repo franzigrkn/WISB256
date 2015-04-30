@@ -10,7 +10,9 @@ def prime(n):
                 getallen.remove(x)
     
     return getallen
-    
+n=10000
+T2=time.perf_counter()
+
 n=int(sys.argv[1])
 bestandsnaam = sys.argv[2]
 
@@ -22,11 +24,11 @@ document.close()
     
 size=(len(prime(n)))
 
-T2=time.perf_counter()
+
 
 print('Found ' + str(size) + ' Prime numbers smaller than ' + str(n) + ' in ' + str(T2-T1) + ' sec.')
 
- 
+
 
 
 
