@@ -3,7 +3,7 @@ import time
 T1=time.perf_counter()
 
 def prime(n):
-    getallen = list(range(2,n, 1))
+    getallen = list(range(2,int(n**(0.5)), 1))
     for deler in getallen:
         for x in getallen:
             if x%deler==0 and x!=deler:
