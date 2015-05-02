@@ -10,7 +10,7 @@ def prime(n):
                 getallen.remove(x)
     
     return getallen
-n=10000
+
 T2=time.perf_counter()
 
 n=int(sys.argv[1])
