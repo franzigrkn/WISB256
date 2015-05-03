@@ -33,6 +33,8 @@ T3 = time.perf_counter()
 print('Time required', T2 - T1, 'sec.')
 print('Time required', T3 - T2, 'sec.')
 
+print(int(3.2))
+
 
 
 
