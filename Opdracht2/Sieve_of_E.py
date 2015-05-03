@@ -24,12 +24,7 @@ for x in prime(n):
         document.write(str(x) + '\n')
 document.close()
     
-
-    
-num_line=sum(1 for line in open('prime.dat'))
-
-
-
+num_line=sum(1 for line in open(bestandsnaam))
 
 print('Found ' + str(num_line) + ' Prime numbers smaller than ' + str(n) + ' in ' + str(T2-T1) + ' sec.')
 
