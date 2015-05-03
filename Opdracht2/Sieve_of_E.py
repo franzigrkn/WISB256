@@ -25,9 +25,13 @@ for x in prime(n):
 document.close()
     
 
-size=(len(prime(n)))
+    
+num_line=sum(1 for line in open('prime.dat'))
 
-print('Found ' + str(size) + ' Prime numbers smaller than ' + str(n) + ' in ' + str(T2-T1) + ' sec.')
+
+
+
+print('Found ' + str(num_line) + ' Prime numbers smaller than ' + str(n) + ' in ' + str(T2-T1) + ' sec.')
 
 
 
