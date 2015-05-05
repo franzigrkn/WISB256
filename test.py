@@ -1,9 +1,14 @@
-word='hello'
+import random
 
-middle=str(word[1:-1])
+x = random.random() # uniform in [0,1]
+y= random.random()
+a = random.vonmisesvariate(0,0) #uniform in [0,2*pi]
 
-print(middle)
-print(type(middle))
+for i in range(5):
+    print(x)
+    print(y)
+
+
 
 
 
