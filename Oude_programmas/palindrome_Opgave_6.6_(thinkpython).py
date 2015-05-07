@@ -19,15 +19,14 @@ def is_palindrome(word):
     elif len(word) > 1:                      #voor alle getallen met lengte groter dan 1
         if first(word)==last(word):
             newword= str(middle(word))
-            is_palindrome(newword)
+            return is_palindrome(newword)
+            
         else: 
             return False
     
         
-print(is_palindrome('hh'))
+print(is_palindrome('redivider'))
 
     
-        
-    
-
-    
+def ispalin(word):
+    return (word == word.reversed())
