@@ -1,5 +1,4 @@
-print(range(1,5))
-
+print(abs(-7))
 
 
 

@@ -6,8 +6,6 @@ if len(sys.argv)==4:
     seed = int(sys.argv[3])
     random.seed(seed)
 
-        
-
 def drop_needle(L):
     x_0=random.random() # uniform in [0,1]
     #y_0=random.random()
