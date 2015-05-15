@@ -25,10 +25,10 @@ for i in range(0,3):
       
     elif rij_1[i]==rij_2[i] and rij_2[i]==rij_3[i]:
         #print('vertikal')
-        if rij_1[i-1]=='1':
+        if rij_1[i]=='1':
             print('Player 1 wins')
             quit()
-        elif rij_1[i-1]=='2':
+        elif rij_1[i]=='2':
             print('Player 2 wins')
             quit()
 
