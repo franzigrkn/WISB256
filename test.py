@@ -1,5 +1,4 @@
-name=input().split()
-print(name)
+print(6/5)
 
 
 
