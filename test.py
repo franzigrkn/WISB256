@@ -1,5 +1,5 @@
-print(6/5)
-
+number=input()
+print(type(number))
 
 
 
