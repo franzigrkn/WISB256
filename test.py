@@ -1,5 +1,4 @@
-lijst=list(range(3,100, 3))
-print(lijst)
+print(2*3*4*5*7*3*11*2*13*17*19)
 
 
 
