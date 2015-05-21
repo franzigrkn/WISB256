@@ -1,8 +1,9 @@
 import bisection
+import math
 
 def f(x):
-    x-1
-    return x**2-2
+    return math.sin(x)
     
-root = bisection.findAllRoots(f,-2,2,0.1)
+    
+root = bisection.findAllRoots(f,-3,3,0.0001)
 print(root)
