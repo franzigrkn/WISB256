@@ -38,7 +38,9 @@ def hits_needle():
 
     
     if L > 1:
-        print('AssertionError: L should be smaller than 1')
+        P=2*L/(math.pi)-2/(math.pi)*(math.sqrt(L**2-1) + 1/(math.sin(L)))+1
+        hits=int(P*N)
+        print(str(hits) + ' hits in ' + str(N) + ' tries')
         return
     
     count=0
