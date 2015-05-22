@@ -38,9 +38,8 @@ twin_pairs=[]
 for i in range(0,pi_N -1):
     if lijst[i+1]-lijst[i]==2:
         twin_pairs.append(lijst[i])
-        twin_pairs.append(lijst[i+1])
 twin=list(set(twin_pairs))
-print(twin)
+#print(twin)
 
 pi_2N=len(twin)
 #print(pi_2N)
