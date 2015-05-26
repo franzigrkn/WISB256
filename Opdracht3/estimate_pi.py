@@ -38,19 +38,24 @@ def hits_needle():
 
     
     if L > 1:
-        P=2*L/(math.pi)-2/(math.pi)*(math.sqrt(L**2-1) + 1/(math.sin(L)))+1
-        hits=int(P*N)
-        print(str(hits) + ' hits in ' + str(N) + ' tries')
-        return
+        count_2=0
+        for i in range(1,N+1):
+            if drop_needle(L) == True:
+                count_2=count_2 + 1
+        print(str(count_2) + ' hits in ' + str(N) + ' tries')
+        p=count_2/N
+        pi_2 = 2/(p-1)*((-1)*math.sqrt((L**2)-1)+L-math.asin(1/L))
+        print('Pi = ' + str(pi_2))
     
-    count=0
-    for i in range(1,N+1):
-        if drop_needle(L) == True:
-            count=count+1
-    print(str(count) + ' hits in ' + str(N) + ' tries')
-    pi= (2*N*L)/count
-    print('Pi = ' + str(pi))
-    return
+    else:
+        count=0
+        for i in range(1,N+1):
+            if drop_needle(L) == True:
+                count=count+1
+        print(str(count) + ' hits in ' + str(N) + ' tries')
+        pi= (2*N*L)/count
+        print('Pi = ' + str(pi))
+        return
             
 
 hits_needle()
