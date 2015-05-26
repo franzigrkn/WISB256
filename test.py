@@ -1,4 +1,5 @@
-print(2.5/0.0001)
+lijst=[0]
+print(type(lijst))
 
 
 

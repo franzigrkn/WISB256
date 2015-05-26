@@ -2,8 +2,8 @@ import bisection
 import math
 
 def f(x):
-    return math.sin(x)
+    return math.cos(x)
+
     
-    
-root = bisection.findAllRoots(f,-3,3,0.0001)
+root = bisection.findRoot(f,0,2,0.1)
 print(root)

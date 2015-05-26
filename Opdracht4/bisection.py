@@ -4,7 +4,7 @@ def findRoot(f,a,b,epsilon):
     elif f(b)==0: # if b is root, return b
         return b
     if f(a)*f(b)>0:
-        return
+        return 
     m=(b+a)/2
     if abs(b-a) <= epsilon:
         return m
