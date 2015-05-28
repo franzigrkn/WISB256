@@ -1,13 +1,7 @@
 import math
 
 class Vector():
-    ''' Klasse voor Vectoren in R^n
-    eigenschappen: dimensie, lijst van floats
-    methoden : add, scalar_product, inn_product
     
-    '''
-    
-    #__slots__=('dimensie', 'elementen', 'vector')
     
     def __init__(self, n, constante=0):
         self.vector=[]
