@@ -2,7 +2,6 @@ import math
 
 class Vector():
     
-    
     def __init__(self, n, constante=0):
         self.vector=[]
         self.dimensie=n
@@ -15,9 +14,6 @@ class Vector():
                 self.vector.append(constante[i])
             self.elementen=self.vector
             
-        
-            
-        
     def __str__(self):
         answer=''
         #print(type(answer))
@@ -30,7 +26,7 @@ class Vector():
     def lincomb(self, other, alpha,beta):
         lijst=[]
         for i in range(self.dimensie):
-            lijst.append (alpha*self.elementen[i]+beta*other.elementen[i])
+            lijst.append(alpha*self.elementen[i]+beta*other.elementen[i])
         return Vector(self.dimensie, lijst)
         
     def scalar(self, alpha):
@@ -55,7 +51,7 @@ class Vector():
         
         
 def projection_operator(u,v):
-    constant=u.inner(v)/u.norm()
+    constant=v.inner(u)/(u.norm()**2)
     return u.scalar(constant)
     
 def orthonormal(u):
@@ -65,15 +61,19 @@ def orthonormal(u):
 
 def GrammSchmidt(lijst):
     aantal=len(lijst)
-    u_1=orthonormal(lijst[0])
-    orthogonaal=[u_1]
-    for i in range(2,aantal+1):
-        u_i=lijst[i-1]
-        for j in range(1,i):
-            u_i = u_i.lincomb(projection_operator(orthogonaal[j-1],lijst[i-1]), 1, -1)
-            u_i=orthonormal(u_i)
-    orthogonaal.append(u_i)
-    #print(orthogonaal)
+    orthogonaal=[lijst[0]]
+    for i in range(1,aantal):
+        v_i=lijst[i]
+        u_i=Vector(len(v_i.elementen),v_i.elementen)
+        for j in range(0,i):
+            #print('i is' + str(i)+' j is'+ str(j)+ ' u_'+str(i) +'=' +str(u_i))
+            u_i = u_i.lincomb(projection_operator(orthogonaal[j],v_i), 1, -1)
+            #print('projection =' + str(projection_operator(orthogonaal[j], v_i)))
+        orthogonaal.append(u_i)
+    for i in range(aantal):
+        x=orthonormal(orthogonaal[i])
+        orthogonaal[i]=x
+        
     return(orthogonaal)
         
 
