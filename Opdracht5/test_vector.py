@@ -9,7 +9,7 @@ print(w)
 print(w.norm())
 print(w.inner(u))
 
-from Vector import GrammSchmidt
+from Vector import *
 v0=Vector(3,[3,1,0])
 v1=Vector(3,[2,2,0])
 v2=Vector(3,[5,0,1])
