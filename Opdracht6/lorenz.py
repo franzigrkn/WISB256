@@ -2,6 +2,7 @@
 
 import numpy as np
 import scipy as sp
+from scipy.linalg import eigvals
 from scipy.integrate import odeint
 
 
@@ -23,7 +24,10 @@ class Lorenz():
         y_dot=w[0]*(self.rho-w[2])-w[1]
         z_dot=w[0]*w[1]-(self.beta)*w[2]
         
-        return np.array([x_dot, y_dot, z_dot])
+        result=np.array([x_dot, y_dot, z_dot])
+        #print(result)
+        return result
+        
         
     def solve(self, T, dt):
     
@@ -37,6 +41,22 @@ class Lorenz():
         #return np.array([self.x, self.y, self.z])
         return self.oplossing
         
+    def df(self, u):
+        matrix=np.array([[-self.sigma, self.sigma, 0],
+                         [self.rho-u[2], -1, -u[0]],
+                         [u[1], u[0], -self.beta]])
+        return matrix
+    
+        
+    def isStable(self,u):
+        eigenwaarden=eigvals(self.df(u))
+        print(eigenwaarden)
+        if eigenwaarden[0]<0 and eigenwaarden[1]<0 and eigenwaarden[2]<0:
+            return True
+        else:
+            return False
+        
+    
      
             
             
