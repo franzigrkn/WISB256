@@ -31,6 +31,6 @@ with PdfPages('plot.pdf') as pdf:
 
     pdf.savefig() 
 
-print(L1.isStable([math.sqrt(L1.beta*L1.rho),math.sqrt(L1.beta*L1.rho),27]))
+print(L1.isStable([math.sqrt(L1.beta*(L1.rho-1)),math.sqrt(L1.beta*(L1.rho-1)),L1.rho-1]))
 
 
